@@ -35,7 +35,7 @@ Antes de rodar o projeto, fiquem de olho nas configs
 
 ## Artigos para Estudo
 
-Para quem quiser se aprofundar (e deve 👀):
+Para quem quiser se aprofundar:
 
 -  [Inserções em Lote com JDBC – GeeksforGeeks](https://www.geeksforgeeks.org/batch-insert-in-jdbc/)
 -  [Processamento em Lote no JDBC – TutorialsPoint](https://www.tutorialspoint.com/jdbc/jdbc-batch-processing.htm)
@@ -47,15 +47,9 @@ Para quem quiser se aprofundar (e deve 👀):
 
 - Tentar implementar um **rollback** em caso de erro no batch
 - Comparar tempo de execução entre inserts individuais e batch
-- Usar **PreparedStatement** para evitar SQL injection
 - Simular carregamentos com planilhas grandes (1000+ linhas)
 
 ---
-
-##  Bora codar!
-
-Clone, explore, brinque com o código e seja feliz com o Java!!!
-
  *"Código bom é aquele que você entende sem esforço."*
 
 > 💬 Se tiver dúvidas, consulte seu professor...
