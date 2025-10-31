@@ -22,7 +22,6 @@ Antes de rodar o projeto, fiquem de olho nas configs
 ###  Dependências
 - [Apache POI](https://poi.apache.org/) — para ler e manipular planilhas `.xlsx`
 - JDBC — para comunicação com o banco
-- 
 >  **Dica:** Verifiquem no `pom.xml` se as dependências do Apache POI estão completas (`poi-ooxml`, `poi-ooxml-schemas`, etc.)
 
 ### Banco de Dados
