@@ -1,18 +1,36 @@
 package school.sptech;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Properties;
 
 public class Load {
 
-    private String urlBanco = "jdbc:mysql://localhost:3306/sptech";
-    private String usuario = "root";
-    private String senha = "versecret";
+    private String urlBanco;
+    private String usuario;
+    private String senha;
 
     private String query = "INSERT INTO aluno (nome) VALUES (?)";
+
+
+    public Load() {
+        try (InputStream input = getClass().getResourceAsStream("/application.properties")) {
+            Properties props = new Properties();
+            props.load(input);
+
+            urlBanco = props.getProperty("db.url");
+            usuario = props.getProperty("db.username");
+            senha = props.getProperty("db.password");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public String carregamentoEmLote(List<String> dados, int tamanhoLote) {
         try (Connection conexao = DriverManager.getConnection(urlBanco, usuario, senha);
